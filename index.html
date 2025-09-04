@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2f7, #cfd9e6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 1;
+      max-width: 600px;
+      padding: 20px 30px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    /* Animated Gradient Text */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #1d72b8, #6dd5fa, #1d72b8);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 3s ease infinite;
+      margin-bottom: 15px;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    /* Loader */
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ccc;
+      border-top-color: #1d72b8;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Single floating icon */
+    .icon {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 32px;
+      color: rgba(29, 114, 184, 0.3);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-15px); }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .loader { width: 50px; height: 50px; border-width: 5px; }
+      .icon { font-size: 28px; top: 12%; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      p { font-size: 0.9rem; }
+      .loader { width: 40px; height: 40px; border-width: 4px; }
+      .icon { font-size: 24px; top: 10%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Single floating icon -->
+ 
+
+  <div class="container">
+    <div class="loader"></div>
+    <h1>We're Coming Soon</h1>
+    <p>Our website is getting a fresh new look. Stay tuned for something amazing!</p>
+  </div>
+</body>
+</html>
